@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">EjercicioAerolinea</string>
+    <string name="logo">logo</string>
+    <string name="destino">Destino</string>
+    <string name="phone">Phone</string>
+    <string name="addresse">Addresse</string>
+    <string name="last">Last</string>
+    <string name="name">Name</string>
+    <string name="origen">Origen</string>
+    <string name="conditions">conditions</string>
+    <string name="email">Email</string>
+    <string name="regimen">Regimen:</string>
+    <string name="viajar">Viajar:</string>
+    <string name="premium">Premium</string>
+    <string name="ventana">Ventana</string>
+    <string name="mascota">Mascota</string>
+    <string name="desayuno">Desayuno</string>
+    <string name="comida">Comida</string>
+    <string name="cena">Cena</string>
+    <string name="button">Button</string>
+    <string name="seguro">El presente contrato se regirá por la Legislación Española y en concreto por la Ley 50/1980 de 8 de
+Octubre, de Contrato de Seguro, por la 20/15 de 14 de Julio, de Ordenación, Supervisión y Solvencia de
+Entidades Aseguradoras y Reaseguradoras, su reglamento y por la normativa específica que sea
+aplicable.
+Serán válidas las cláusulas contractuales, distintas de las legales, que sean más beneficiosas para el
+asegurado. Las cláusulas limitativas contenidas en la póliza sólo serán válidas con la previa aprobación
+por escrito del suscriptor de la póliza.
+Si el contenido de la presente póliza es distinto de la proposición del seguro o de las cláusulas acordadas,
+el tomador del seguro podrá reclamar a la entidad aseguradora en el plazo de un mes desde la entrega
+de la póliza para que subsane la divergencia existente.Transcurrido dicho plazo sin efectuar la
+reclamación, se estará a lo dispuesto en la póliza.</string>
+    <string name="comprar">COMPRAR</string>
+    <string name="a_d_nde_va">¿A DÓNDE VA?</string>
+    <string name="de_d_nde_viene">¿DE DÓNDE VIENE?</string>
+    <string name="premium_">premium</string>
+    <string name="seguro_">Seguro</string>
+    <string name="si">SI</string>
+    <string name="no">NO</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="camara">Camara</string>
+    <string name="search">Search</string>
+    <string name="sobre_nosotros">Sobre nosotros</string>
+    <string name="accesibilidad">accesibilidad</string>
+    <string name="movilidad_reducida">Movilidad Reducida</string>
+    <string name="cuenta">Cuenta</string>
+    <string name="viajes">Viajes</string>
+    <string name="datos_personales">Datos personales</string>
+    <string name="documentos_de_viajes">Documentos de viajes</string>
+    <string name="compa_eros_de_viaje">Compañeros de viaje</string>
+    <string name="tarjeta_de_embarque">Tarjeta de embarque</string>
+    <string name="informaci_n_de_vuelos">Información de vuelos</string>
+    <string name="informaci_n_actualizada">Información actualizada</string>
+    <string name="vales_de_regalo">Vales de regalo</string>
+    <string name="revista_de_vuelo">Revista de vuelo</string>
+    <string name="t_rminos_y_condiciones">Términos y condiciones</string>
+    <string name="centro_de_ayuda">Centro de ayuda</string>
+    <string name="contactar_con_aerolinea">Contactar con aerolinea</string>
+    <string name="configuraci_n_de_privacidad">Configuración de privacidad</string>
+    <string name="pol_tica_de_privacidad">Política de privacidad</string>
+    <string name="confirmar">CONFIRMAR</string>
+    <string name="fecha">Fecha</string>
+    <string name="date">DATE</string>
+    <string name="finalizar">FINALIZAR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

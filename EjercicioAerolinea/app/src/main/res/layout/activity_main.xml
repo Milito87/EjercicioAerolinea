@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80DCDCDC"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.AppCompat" />
+
+    <ImageView
+        android:id="@+id/iLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/aerolinea" />
+
+    <TextView
+        android:id="@+id/tvOrigen"
+        style="@style/myStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/origen"
+        app:layout_constraintEnd_toEndOf="@+id/tvDestino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iLogo" />
+
+    <TextView
+        android:id="@+id/tvDestino"
+        style="@style/myStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/destino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrigen" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/myStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/fecha"
+        app:layout_constraintEnd_toEndOf="@+id/tvDestino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestino" />
+
+    <Spinner
+        android:id="@+id/spinOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/Ciudades"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOrigen"
+        app:layout_constraintTop_toBottomOf="@+id/iLogo"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <Spinner
+        android:id="@+id/spinDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/Ciudades"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDestino"
+        app:layout_constraintTop_toBottomOf="@+id/spinOrigen"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/etDate"
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/date"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDate"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/ibtPremium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etAddress"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/addresse"
+                android:importantForAutofill="no"
+                android:inputType="textPostalAddress"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/phone"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinSr"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:entries="@array/sr"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvConditions"
+                style="@style/myStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seguro" />
+
+            <Switch
+                android:id="@+id/switchMov"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movilidad_reducida" />
+
+            <EditText
+                android:id="@+id/etLast"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/last"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/linearTravel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTravel"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/viajar" />
+
+                <CheckBox
+                    android:id="@+id/checkPremium"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/premium" />
+
+                <CheckBox
+                    android:id="@+id/checkWindow"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/ventana" />
+
+                <CheckBox
+                    android:id="@+id/checkPet"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/mascota" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearEats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRegimen"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/regimen" />
+
+                <CheckBox
+                    android:id="@+id/checkBreak"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/desayuno" />
+
+                <CheckBox
+                    android:id="@+id/checkEat"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/comida" />
+
+                <CheckBox
+                    android:id="@+id/checkDin"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/cena" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearSafe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSafe"
+                    style="@style/myStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seguro_" />
+
+                <RadioGroup
+                    android:id="@+id/radioSeguro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioYES"
+                        style="@style/myStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/si"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <RadioButton
+                        android:id="@+id/radioNO"
+                        style="@style/myStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/no" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:gravity="center"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btBuy"
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/comprar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibtPremium"
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/premium_"
+        android:src="@drawable/premium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btBuy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

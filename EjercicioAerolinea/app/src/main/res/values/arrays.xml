@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sr">
+        <item name="Sr">Sr</item>
+        <item name="Sra">Sra</item>
+        <item name="Srta">Srta</item>
+    </string-array>
+
+    <string-array name="mov">
+        <item name="Movilidad Reducida SI">Movilidad reducida SI</item>
+        <item name="Movilidad Reducida NO">Movilidad reducida NO</item>
+    </string-array>
+
+    <string-array name="Ciudades">
+        <item name="madrid">MADRID</item>
+        <item name="paris">PARIS</item>
+        <item name="berlin">BERLIN</item>
+        <item name="milan">MILAN</item>
+        <item name="porto">OPORTO</item>
+        <item name="londres">LONDRES</item>
+    </string-array>
+
+</resources>
